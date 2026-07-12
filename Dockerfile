@@ -2,8 +2,8 @@ FROM eclipse-temurin:8-jre
 
 EXPOSE 8080
 
-RUN ls -al
-COPY ./build/libs/my-app-1.0-SNAPSHOT.jar /usr/app/
+COPY ./build/libs/*.jar /usr/app/
+
 WORKDIR /usr/app
 
 ENTRYPOINT ["java", "-jar", "my-app-1.0-SNAPSHOT.jar"]
