@@ -43,6 +43,6 @@ jobs:
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v6
       with:
-        context: .
+        context: build/libs/.
         push: true
         tags: seetharam426/gradle-app:latest
