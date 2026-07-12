@@ -27,6 +27,12 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
+    - name: List build artifacts
+      run: |
+        pwd
+        ls -la
+        ls -la build
+        ls -la build/libs
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v3
